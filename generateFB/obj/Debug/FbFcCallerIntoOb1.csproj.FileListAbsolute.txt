@@ -1,0 +1,8 @@
+D:\Projects\xlstTest\generateFB\bin\Debug\FbFcCallerIntoOb1.exe.config
+D:\Projects\xlstTest\generateFB\bin\Debug\FbFcCallerIntoOb1.exe
+D:\Projects\xlstTest\generateFB\bin\Debug\FbFcCallerIntoOb1.pdb
+D:\Projects\xlstTest\generateFB\obj\Debug\FbFcCallerIntoOb1.csproj.AssemblyReference.cache
+D:\Projects\xlstTest\generateFB\obj\Debug\FbFcCallerIntoOb1.csproj.SuggestedBindingRedirects.cache
+D:\Projects\xlstTest\generateFB\obj\Debug\FbFcCallerIntoOb1.csproj.CoreCompileInputs.cache
+D:\Projects\xlstTest\generateFB\obj\Debug\FbFcCallerIntoOb1.exe
+D:\Projects\xlstTest\generateFB\obj\Debug\FbFcCallerIntoOb1.pdb

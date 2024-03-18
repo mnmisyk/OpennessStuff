@@ -1,0 +1,7 @@
+G:\20240315\TIAGenerator\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+G:\20240315\TIAGenerator\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+G:\20240315\TIAGenerator\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+G:\20240315\TIAGenerator\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+G:\20240315\TIAGenerator\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+G:\20240315\TIAGenerator\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+G:\20240315\TIAGenerator\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
