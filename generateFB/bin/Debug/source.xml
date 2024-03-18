@@ -1,0 +1,110 @@
+<!-- source.xml -->
+<SW.Blocks.CompileUnit CompositionName="CompileUnits" ID="8">						  
+	<AttributeList>
+		<NetworkSource>
+			<FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+				<Parts>
+					<Call UId="21">
+						<CallInfo BlockType="FB"
+								  Name="FB_Test_01">
+							<Instance Scope="GlobalVariable"
+									  UId="22">
+								<Component Name="FB_Test_01_DB_2" />
+							</Instance>
+							<Parameter Name="ix_sw"
+									   Section="Input"
+									   Type="Bool" />
+							<Parameter Name="iw_pos"
+									   Section="Input"
+									   Type="Int" />
+							<Parameter Name="iudt"
+									   Section="Input"
+									   Type="&quot;Udt01&quot;" />
+							<Parameter Name="istruct"
+									   Section="Input"
+									   Type="Struct" />
+							<Parameter Name="qw_pos"
+									   Section="Output"
+									   Type="Int" />
+							<Parameter Name="qx_set"
+									   Section="Output"
+									   Type="Bool" />
+							<Parameter Name="iqw_posSet"
+									   Section="InOut"
+									   Type="Int" />
+						</CallInfo>
+					</Call>
+				</Parts>
+				<Wires>
+					<Wire UId="30">
+						<Powerrail />
+						<NameCon Name="en"
+								 UId="21" />
+					</Wire>
+					<Wire UId="31">
+						<OpenCon UId="23" />
+						<NameCon Name="ix_sw"
+								 UId="21" />
+					</Wire>
+					<Wire UId="32">
+						<OpenCon UId="24" />
+						<NameCon Name="iw_pos"
+								 UId="21" />
+					</Wire>
+					<Wire UId="33">
+						<OpenCon UId="25" />
+						<NameCon Name="iudt"
+								 UId="21" />
+					</Wire>
+					<Wire UId="34">
+						<OpenCon UId="26" />
+						<NameCon Name="istruct"
+								 UId="21" />
+					</Wire>
+					<Wire UId="35">
+						<OpenCon UId="27" />
+						<NameCon Name="iqw_posSet"
+								 UId="21" />
+					</Wire>
+					<Wire UId="36">
+						<NameCon Name="qw_pos"
+								 UId="21" />
+						<OpenCon UId="28" />
+					</Wire>
+					<Wire UId="37">
+						<NameCon Name="qx_set"
+								 UId="21" />
+						<OpenCon UId="29" />
+					</Wire>
+				</Wires>
+			</FlgNet>
+		</NetworkSource>
+		<ProgrammingLanguage>LAD</ProgrammingLanguage>
+	</AttributeList>
+	<ObjectList>
+		<MultilingualText CompositionName="Comment"
+						  ID="9">
+			<ObjectList>
+				<MultilingualTextItem CompositionName="Items"
+									  ID="A">
+					<AttributeList>
+						<Culture>zh-CN</Culture>
+						<Text />
+					</AttributeList>
+				</MultilingualTextItem>
+			</ObjectList>
+		</MultilingualText>
+		<MultilingualText CompositionName="Title"
+						  ID="B">
+			<ObjectList>
+				<MultilingualTextItem CompositionName="Items"
+									  ID="C">
+					<AttributeList>
+						<Culture>zh-CN</Culture>
+						<Text>Network2_comment</Text>
+					</AttributeList>
+				</MultilingualTextItem>
+			</ObjectList>
+		</MultilingualText>
+	</ObjectList>
+</SW.Blocks.CompileUnit>
