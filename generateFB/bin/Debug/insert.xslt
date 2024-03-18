@@ -1,9 +1,12 @@
 <!-- insert.xslt -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:param name="ExternalTimes"/>
-	<xsl:param name="ExternalID"/>
-    <xsl:template match="/">
- <Document>
+	<!--<xsl:param name="ExternalTimes"/>
+	<xsl:param name="ExternalID"/>-->
+	<xsl:template match="Model_InsertFb">
+
+		<xsl:variable name="ExternalTimes" select="ExternalTimes"/>
+		<xsl:variable name="ExternalID" select="ExternalID" />
+		<Document>
 			<Engineering version="V18" />
 			<SW.Blocks.OB ID="0">
 				<AttributeList>
@@ -59,19 +62,19 @@
 						</ObjectList>
 					</MultilingualText>
 					<!-- 在指定位置插入导入的XML文件内容 -->
-					 <xsl:call-template name="insert">
-                        <!-- <xsl:with-param name="content" select="document('source.xml')/*" /> -->
-                        <xsl:with-param name="times" select="$ExternalTimes" />
+					<xsl:call-template name="insert">
+						<!-- <xsl:with-param name="content" select="document('source.xml')/*" /> -->
+						<xsl:with-param name="times" select="$ExternalTimes" />
 						<xsl:with-param name="external_id" select="$ExternalID" />
-                    </xsl:call-template>
+					</xsl:call-template>
 					<!-- 1232323111111111111111111111111111 -->
 
-						
+
 					<MultilingualText CompositionName="Title"
 									  ID="5000">
 						<ObjectList>
 							<MultilingualTextItem CompositionName="Items" ID="5001">
-												  
+
 								<AttributeList>
 									<Culture>zh-CN</Culture>
 									<Text>"Main Program Sweep (Cycle)"</Text>
@@ -82,32 +85,32 @@
 				</ObjectList>
 			</SW.Blocks.OB>
 		</Document>
-    </xsl:template>
- 
-    <xsl:template name="insert">
-        <!-- <xsl:param name="content" /> -->
-        <xsl:param name="times" />
+	</xsl:template>
+
+	<xsl:template name="insert">
+		<!-- <xsl:param name="content" /> -->
+		<xsl:param name="times" />
 		<xsl:param name="external_id" />
-        <xsl:if test="$times &gt; 0">
-            <!-- <xsl:copy-of select="$content" /> -->
+		<xsl:if test="$times &gt; 0">
+			<!-- <xsl:copy-of select="$content" /> -->
 			<xsl:call-template name="FbBlock">
-				 <xsl:with-param name="IncreasingID" select="$external_id " />
+				<xsl:with-param name="IncreasingID" select="$external_id " />
 			</xsl:call-template>
 
-            <xsl:call-template name="insert">
-                <!-- <xsl:with-param name="content" select="$content" /> -->
-                <xsl:with-param name="times" select="$times - 1" />
-				 <xsl:with-param name="external_id" select="$external_id+200" />  
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
+			<xsl:call-template name="insert">
+				<!-- <xsl:with-param name="content" select="$content" /> -->
+				<xsl:with-param name="times" select="$times - 1" />
+				<xsl:with-param name="external_id" select="$external_id+200" />
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
 
 
-    <xsl:template name ="FbBlock">
+	<xsl:template name ="FbBlock">
 
 		<xsl:param name="IncreasingID" />
-         <!-- source.xml -->
-		<SW.Blocks.CompileUnit CompositionName="CompileUnits" ID="{$IncreasingID}">						  
+		<!-- source.xml -->
+		<SW.Blocks.CompileUnit CompositionName="CompileUnits" ID="{$IncreasingID}">
 			<AttributeList>
 				<NetworkSource>
 					<FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
@@ -215,7 +218,7 @@
 					</ObjectList>
 				</MultilingualText>
 			</ObjectList>
-</SW.Blocks.CompileUnit>
+		</SW.Blocks.CompileUnit>
 
-    </xsl:template>
+	</xsl:template>
 </xsl:stylesheet>
